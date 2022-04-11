@@ -12,19 +12,7 @@ import multiprocessing
 import os
 import sys
 
-# # TODO: now the positions refer to peptide/treatments instead of the row data array so need functions that
-# #  replaces candidate_data = data[tempDataPoints[leafNode][0]][:, tempDataPoints[leafNode][1], :].reshape(-1, 2),
-# #  i.e. given the label of rows and columns, it returns all corresponding data cells (including repeated experiments)
-# #  as a N*2 array, in addition, since we now allow missing values, also need an additional step that removes all
-# #  missing values (Nans) from the N*2 array, no need to modify the marginal lkd function?
-# #  In short, data matrix now is allows NaN cells, and we need to
-# #  design a function that takes peptide and treatment indices as input, return a N*2 block_data array as output
-# #  with all non-missing results associated with the corresponding peptides and treatments stacked,
-#
-# # let the data be a rr*cc*k np array
-# # need a separate dictionary such that row_dic[r] gives all rows in data that correspond to rth peptide, similar for col
-# # introduce two lists that links peptide/treatment to rows/columns of the real data
-#
+
 def cov_idx_to_data_idx(row_idx, col_idx, row_link, col_link):
     '''
     takes two lists row_idx, col_idx, return all non-missing results associated with the corresponding peptides
