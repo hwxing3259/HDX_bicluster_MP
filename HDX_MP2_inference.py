@@ -1,4 +1,4 @@
-from MP_non_square_tempered_rescaled_new import *
+from HDX_MP2_base import *
 import pandas
 import sys
 # take argument from cmd
